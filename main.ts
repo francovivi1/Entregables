@@ -1,9 +1,9 @@
-"use strict";
-import { vehiculo } from "./vehiculo.js"; // Asegúrate de que el archivo tenga la extensión .js
-import { RegistroAutomotor } from "./Automotor.js"; // Asegúrate de que el archivo tenga la extensión .js
+import { vehiculo } from "./vehiculo";
+import { RegristroAutomotor } from "./Automotor";
 
 function main() {
-  const registroAutomotor = new RegistroAutomotor([], [], []);
+  const registroAutomotor = new RegristroAutomotor([], [], []);
+
   // Crear vehículos
   const auto = new vehiculo("Auto", "Jeep", "Renegade", 2023);
   const moto = new vehiculo("Moto", "Kawasaki", "Vulcan", 2021);
@@ -17,7 +17,7 @@ function main() {
   // Mostrar los vehículos registrados
   console.log("Auto registrado:", registroAutomotor.getAutos());
   console.log("Moto registrada:", registroAutomotor.getMotos());
-  console.log("Camion registrado:", registroAutomotor.getCamiones()); // Corrige el nombre de la función
+  console.log("Camion registrado:", registroAutomotor.getCamion());
 
   // Modificar un vehículo
   const nuevoAuto = new vehiculo("Auto", "Fiat", "206", 2007);
@@ -30,10 +30,8 @@ function main() {
   registroAutomotor.darBaja("Camion", camion);
 
   // Mostrar los vehículos después de darlos de baja
-  console.log("Autos dados de baja:", registroAutomotor.getAutos());
-  console.log("Motos dadas de baja:", registroAutomotor.getMotos());
-  console.log("Camiones dados de baja:", registroAutomotor.getCamiones()); // Corrige el nombre de la función
+  console.log("Autos dado de baja:", registroAutomotor.getAutos());
+  console.log("Motos dado de baja:", registroAutomotor.getMotos());
+  console.log("Camion dado de baja:", registroAutomotor.getCamion());
 }
-
-// Llama a la función main
 main();
