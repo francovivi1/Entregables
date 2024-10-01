@@ -35,3 +35,5 @@ function main() {
   console.log("Camion dado de baja:", registroAutomotor.getCamion());
 }
 main();
+
+//sstas
